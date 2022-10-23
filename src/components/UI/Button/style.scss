@@ -1,0 +1,20 @@
+@use '../../../constants/colors';
+
+.button {
+  color: colors.$buttonText;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.primary {
+  background-color: colors.$primary;
+}
+
+.danger {
+  background-color: colors.$danger;
+}

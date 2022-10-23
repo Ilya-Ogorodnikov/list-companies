@@ -1,0 +1,58 @@
+@use '../../../constants/colors';
+
+.modal-wrapper {
+  height: 100%;
+  width: 100%;
+  background: rgba($color: colors.$modalWrapper, $alpha: 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 70rem;
+  background-color: colors.$modalBackground;
+  border-radius: 15px;
+
+  &__title {
+    font-weight: 300;
+    line-height: 4.219rem;
+    font-size: 3.6rem;
+    padding: 4rem 0 4rem 4rem;
+  }
+
+  &__buttons-group {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__cancel,
+  &__save {
+    padding: 1rem 4rem;
+    color: colors.$modalButtonText;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    border: 0.2rem solid colors.$borderModalButton;
+    border-radius: 0.4rem;
+    transition: all 0.5s ease-in;
+
+    &:hover {
+      background: colors.$borderColor;
+      color: colors.$buttonModalHoverText;
+      border-color: colors.$borderColor;
+    }
+  }
+
+  &__save {
+    margin-right: 4rem;
+    background: colors.$modalButtonSave;
+    border-color: colors.$modalButtonSave;
+  }
+}
